@@ -12,6 +12,8 @@
 
     <bean id="musicPlayer"
           class="springcore.MusicPlayer">
-        <constructor-arg ref="musicBean"/>
+        <property name="music" ref="musicBean"/>
+        <property name="name" value="Yar"/>
+        <property name="volume" value="70"/>
     </bean>
 </beans>
