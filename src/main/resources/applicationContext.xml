@@ -9,4 +9,9 @@
     <bean id="musicBean"
           class="springcore.ClassicalMusic">
     </bean>
+
+    <bean id="musicPlayer"
+          class="springcore.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
 </beans>
