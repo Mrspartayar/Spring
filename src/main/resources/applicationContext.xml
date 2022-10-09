@@ -6,8 +6,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
-    <bean id="testBean"
-          class="springcore.TestBean">
-        <constructor-arg value="Yar"/>
+    <bean id="musicBean"
+          class="springcore.ClassicalMusic">
     </bean>
 </beans>
