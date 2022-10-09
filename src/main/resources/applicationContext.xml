@@ -13,9 +13,11 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="springcore.MusicPlayer">
+          class="springcore.MusicPlayer"
+          scope="prototype">
+
         <property name="music" ref="musicBean"/>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
+        <property name="name" value="Some name"/>
+        <property name="volume" value="70"/>
     </bean>
 </beans>
