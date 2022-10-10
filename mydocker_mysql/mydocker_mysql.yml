@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  mydocker_mysql-db:
+    image: mysql
+    container_name: mydocker_mysql-db
+    environment:
+      - MYSQL_PASSWORD=123456
+      - MYSQL_USER=yar
+      - MYSQL_DATABASE=mydocker_mysql-db
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - "6668:3306"

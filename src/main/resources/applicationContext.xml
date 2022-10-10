@@ -9,15 +9,18 @@
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
     <bean id="musicBean"
-          class="springcore.ClassicalMusic">
+          class="springcore.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic">
     </bean>
 
-    <bean id="musicPlayer"
-          class="springcore.MusicPlayer"
-          scope="prototype">
+    <!--    <bean id="musicPlayer"-->
+    <!--          class="springcore.MusicPlayer"-->
+    <!--          scope="prototype">-->
 
-        <property name="music" ref="musicBean"/>
-        <property name="name" value="Some name"/>
-        <property name="volume" value="70"/>
-    </bean>
+    <!--        <property name="music" ref="musicBean"/>-->
+    <!--        <property name="name" value="Some name"/>-->
+    <!--        <property name="volume" value="70"/>-->
+    <!--    </bean>-->
 </beans>

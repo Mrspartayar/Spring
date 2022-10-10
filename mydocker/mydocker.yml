@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  mydocker-db:
+    image: postgres:14.5
+    container_name: mydocker-db
+    environment:
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_USER=yar
+      - POSTGRES_DB=mydocker-db
+    ports:
+      - "6667:5432"
+    volumes:
+      - ./yardata:/var/lib/postgresql/data
